@@ -11,3 +11,14 @@
     font-weight: 600;
 
 }
+
+@media(max-width:992px) {
+    .Footer {
+        padding: 15px 50px;
+    }
+
+    .Footer p {
+        font-size: 15px !important;
+        padding: 0;
+    }
+}
