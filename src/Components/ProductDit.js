@@ -1,17 +1,17 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import NavBar from "../Components/NavBar/NavBar"
 import "./ProductDilt.css"
 
 function ProductDit() {
     const api_url = "https://api.escuelajs.co/api/v1/products"
     const [product, setproduct] = useState({});
-    const prams = useParams();
-    useEffect(() => {
-        fetch(`${api_url}/${prams.productId}`)
-            .then((res) => res.json())
-            .then((product) => setproduct(product))
-    }, [])
+    const prams = useParams({});
+
+    fetch(`${api_url}/${prams.productId}`)
+        .then((res) => res.json())
+        .then((product) => setproduct(product))
+
     console.log(prams);
     return (
         <>
@@ -29,10 +29,10 @@ function ProductDit() {
                             <>
                                 <h6>size:</h6>
                                 <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                                    <a href="#">XS</a>
-                                    <a href="#">S</a>
-                                    <a href="#">M</a>
-                                    <a href="#">L</a>
+                                    <Link href="#">XS</Link>
+                                    <Link href="#">S</Link>
+                                    <Link href="#">M</Link>
+                                    <Link href="#">L</Link>
                                 </div>
                             </>
                         </div>

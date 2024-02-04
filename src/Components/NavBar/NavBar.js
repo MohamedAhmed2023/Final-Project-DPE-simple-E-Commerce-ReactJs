@@ -1,5 +1,4 @@
 import Logo from '../Img/Logo.png'
-import Icon from '../Img/Icon.png'
 import './NavBar.css'
 import { Link } from 'react-router-dom';
 function NavBar() {
@@ -30,7 +29,6 @@ function NavBar() {
                         </ul>
                         <form class="form d-flex">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            { }
                         </form>
                         <button class="btn-53" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">
                             <div class="original">login</div>
@@ -63,7 +61,7 @@ function NavBar() {
                                                 <input type="password" class="form-control" id="recipient-name" />
                                             </div>
                                         </form>
-                                        <a className='sign-in'>create account</a>
+                                        <Link className='sign-in'>create account</Link>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn-53" data-bs-dismiss="modal">Close</button>
