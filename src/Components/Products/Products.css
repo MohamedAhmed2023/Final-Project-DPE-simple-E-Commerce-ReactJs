@@ -1,0 +1,175 @@
+.card {
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.Cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+.card img {
+    width: 100%;
+    height: 250px;
+}
+
+
+
+/* **********************Cards********************************/
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin: 10px 0;
+}
+
+.card img {
+    fill: #333;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+    transform: rotateX(0deg);
+}
+
+.card__title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover img {
+    scale: 0;
+}
+
+.card__description {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #777;
+    line-height: 1.4;
+    overflow: hidden;
+}
+
+
+.card-text {
+    overflow: hidden;
+}
+
+/* ************************btn************************************ */
+
+.btn-12,
+.btn-12 *,
+.btn-12 :after,
+.btn-12 :before,
+.btn-12:after,
+.btn-12:before {
+    border: 0 solid;
+    box-sizing: border-box;
+}
+
+.btn-12 {
+
+    background-color: #ff6f00;
+    color: #fff;
+    cursor: pointer;
+    font-size: 100%;
+    font-weight: 900;
+    padding: 0;
+    border-radius: 99rem;
+    border-width: 2px;
+    overflow: hidden;
+    padding: 12px 24px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.btn-12:hover {
+    background-color: white;
+    color: #ff6f00;
+}
+
+.AllProduct {
+    color: #ff6f00;
+    width: fit-content;
+    font-size: 20px;
+    margin: 20px 20px;
+    margin-left: 270px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 2px solid #ff6f00;
+}
+
+.AllProduct:hover {
+    color: #7c7c7c;
+    border-bottom: 2px solid #7c7c7c;
+}
+
+.text-center {
+    margin: 10px 0;
+    color: #ff6f00;
+}
+
+/* *******************mobileResponsive************************ */
+@media (max-width:992px) {
+    .Cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        margin: auto;
+        width: 100%;
+    }
+
+    .AllProduct {
+        margin-left: 0;
+    }
+
+    .Cards {
+        gap: 0px;
+    }
+
+}

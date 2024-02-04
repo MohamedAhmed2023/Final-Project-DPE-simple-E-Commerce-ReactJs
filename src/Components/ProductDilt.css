@@ -1,0 +1,98 @@
+.cardDit {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.cardDit img {
+    height: 91vh;
+}
+
+.card-content {
+    width: 600px;
+    margin-top: 150px;
+}
+
+.card-content .card-title {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.card-content .card-text {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.card-content span {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.img-group {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+
+.img-group img {
+    height: 200px;
+    width: 300px;
+}
+
+.cards-size {
+    margin: 30px 0;
+}
+
+.cards-size h6 {
+    margin: 20px 0;
+    font-size: 17px;
+}
+
+.btn {
+    color: #ff6f00;
+    border: 2px solid #ff6f00;
+}
+
+.btn-12 {
+    margin-top: 20px;
+    margin-right: 20px !important;
+}
+
+.btn-group {
+    border: #ff6f00 1PX solid;
+}
+
+.btn-group a {
+    padding: 5px 10px;
+    border: #ff6f00 1PX solid;
+    color: #ff6f00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-group a:hover {
+    background-color: #ff6f00;
+    color: #fff;
+}
+
+/* responsiveMobile */
+
+@media (max-width:992px) {
+    .cardDit {
+        display: flex;
+        flex-direction: column;
+        gap: 1;
+    }
+
+    .card-content {
+        width: fit-content;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
+    .img-Dit img {
+        width: 100%;
+        height: 350px;
+        margin: auto;
+    }
+}
