@@ -6,7 +6,7 @@ import Silder from "../Silder/Silder";
 import './Products.css'
 function AllProducts() {
     const [products, setproducts] = useState([]);
-    const api_url = "https://api.escuelajs.co/api/v1/products";
+    const api_url = "https://fakestoreapi.com/products";
 
     useEffect(() => {
         fetch(api_url).then((respon) => respon.json()).then((data) => setproducts(data))
@@ -24,7 +24,7 @@ function AllProducts() {
                             <div className="" Key={product.id}>
                                 <div className="card-parent">
                                     <div class="card">
-                                        <img src={product.images} alt={product.title} />
+                                        <img src={product.image} alt={product.title} />
                                         <div class="card__content">
                                             <h5 className="card-title">{product.title}</h5>
                                             <p className="card-text">{product.description}</p>

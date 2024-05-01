@@ -4,7 +4,7 @@ import NavBar from "../Components/NavBar/NavBar"
 import "./ProductDilt.css"
 
 function ProductDit() {
-    const api_url = "https://api.escuelajs.co/api/v1/products"
+    const api_url = "https://fakestoreapi.com/products"
     const [product, setproduct] = useState({});
     const prams = useParams({});
 
@@ -19,7 +19,7 @@ function ProductDit() {
             <div className="ProductDit">
                 <div className="cardDit" >
                     <div className="img-Dit">
-                        <img src={product.images} alt={product.title} />
+                        <img src={product.image} alt={product.title} />
                     </div>
                     <div className="card-content">
                         <h5 className="card-title">{product.title}</h5>

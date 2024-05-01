@@ -5,7 +5,7 @@ import './Products.css'
 
 function ProductsList() {
     const [products, setproducts] = useState([]);
-    const api_url = "https://api.escuelajs.co/api/v1/products";
+    const api_url = "https://fakestoreapi.com/products";
 
     useEffect(() => {
         fetch(api_url).then((respon) => respon.json()).then((data) => setproducts(data))
@@ -20,7 +20,7 @@ function ProductsList() {
                             <div className="" Key={product.id}>
                                 {product.id <= 25 ? <div className="card-parent">
                                     <div class="card">
-                                        <img src={product.images} alt={product.title} />
+                                        <img src={product.image} alt={product.title} />
                                         <div class="card__content">
                                             <h5 className="card-title">{product.title}</h5>
                                             <Link to={`/product/${product.id}`} className="btn-12">Ditalis</Link>
